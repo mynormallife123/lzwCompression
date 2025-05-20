@@ -1,9 +1,13 @@
 #include "lzw_compression.h"
-#include "lzw_decompression.h"
 
+int main() {
+	std::string sourceFileName = "source.txt";
+	std::string encodedFileName = "encoded.txt";
+	std::string decodedFileName = "decoded.txt";
 
-void initializeDictionary(std::unordered_map<sequence, code>& dictionary) {
-	for (int i = 0; i < 256; ++i) {
-		dictionary[sequence(1, static_cast<char>(i))] = i;
-	}
+	LZWCompressor compressor;
+	compressor.lzwCompress(sourceFileName, encodedFileName);
+	compressor.lzwDecompress(encodedFileName, decodedFileName);
+
+	return 0;
 }
