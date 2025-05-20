@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="lzw_compression.cpp" />
     <ClCompile Include="main.cpp" />
+    <Text Include="source.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lzw_compression.h" />
